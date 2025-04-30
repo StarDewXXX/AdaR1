@@ -6,3 +6,4 @@ The official repository of paper "AdaR1: From Long-Cot to Hybrid-CoT via Bi-Leve
 
 ## Tokens Used of Different Methods
 <img src="figures/token1.jpg"></img>
+
