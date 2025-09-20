@@ -1,25 +1,46 @@
-The official repository of paper "AdaR1: From Long-Cot to Hybrid-CoT via Bi-Level Adaptive Reasoning Optimization"
 
-## 🔍 AdaR1: Adaptive and Efficient Reasoning for Large Language Models
+# 🔍 Ada-R1: From Long-CoT to Hybrid-CoT via Bi-Level Adaptive Reasoning Optimization
 
-**AdaR1** is a two-stage adaptive reasoning framework designed to improve the efficiency of large language models (LLMs) without compromising their reasoning capabilities. While Long Chain-of-Thought (Long-CoT) reasoning has shown strong performance on complex tasks, it often incurs substantial inference overhead and does not always lead to better accuracy across all problems.
+📢 **Update (Sep 2025):**
+Our paper **\[Ada-R1: From Long-CoT to Hybrid-CoT via Bi-Level Adaptive Reasoning Optimization]** has been **accepted at NeurIPS 2025** 🎉.
 
-To address this, AdaR1 introduces a flexible strategy that dynamically adjusts the depth of reasoning based on problem difficulty and redundancy. 
+---
 
-### 🚀 Highlights
-- A **Hybrid Adaptive Reasoning Model** that can adaptively generate Long-CoT or Short-CoT according to the difficulty of problem.
-- Achieve **50%+ reduction in average reasoning length**, significantly lowering inference cost
-- Achieve **Preserved accuracy** on five mathematical reasoning benchmarks
+## ✨ Overview
 
-### 📦 Code & Model Release
+**AdaR1** is a two-stage **adaptive reasoning framework** designed to improve the efficiency of large language models (LLMs) without sacrificing reasoning performance.
 
-The implementation and model checkpoint will be open-sourced soon.
+While **Long Chain-of-Thought (Long-CoT)** reasoning enhances LLMs on complex tasks, it often leads to **substantial inference overhead** and does not always guarantee higher accuracy.
 
-## Results of AdaR1-7B
-<img src="figures/adar1-table.png"></img>
+To address this, AdaR1 introduces a **bi-level adaptive strategy** that dynamically controls reasoning depth by considering both **problem difficulty** and **reasoning redundancy**.
 
-## Accuracy of Different Methods
-<img src="figures/acc1.jpg"></img>
+---
 
-## Tokens Used of Different Methods
-<img src="figures/token1.jpg"></img>
+## 🚀 Key Contributions
+
+* 🔄 **Hybrid Adaptive Reasoning**: Dynamically switches between **Long-CoT** and **Short-CoT** according to problem difficulty.
+* ⚡ **Efficiency**: Reduces average reasoning length by **50%+**, cutting inference cost significantly.
+* 🎯 **Accuracy Preservation**: Maintains accuracy across **five challenging mathematical reasoning benchmarks**.
+* 🧠 **Bi-Level Optimization**: Introduces adaptive control at both *instance-level* and *token-level*.
+
+---
+
+## 📊 Results
+
+### Results of AdaR1-7B
+
+<img src="figures/adar1-table.png" width="600">
+
+### Accuracy of Different Methods
+
+<img src="figures/acc1.jpg" width="600">
+
+### Tokens Used of Different Methods
+
+<img src="figures/token1.jpg" width="600">
+
+---
+
+## 📦 Code & Model Release
+
+The official implementation and model checkpoints will be **open-sourced soon**.
