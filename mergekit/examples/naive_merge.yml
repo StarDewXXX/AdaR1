@@ -1,0 +1,22 @@
+# naive: 0.1, 0.3, 0.4, 0.5
+# constrained: 0.1, 0.3, 0.4, 0.5, 0.6
+models:
+  - model: "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+    parameters:
+      weight: 0.85
+  - model: "../verl/length_control/models/Deepseek-Qwen-1.5B/Deepseek-Qwen-1.5B-Short-COT"
+    parameters:
+      weight: 0.15
+merge_method: linear
+dtype: bfloat16 # #
+
+
+# models:
+#   - model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+#     parameters:
+#       weight: 0.9
+#   - model: ../verl/length_control/models/DeepSeek-R1-Distill-Qwen-7B-concise_superficial_cot/checkpoint-250
+#     parameters:
+#       weight: 0.1
+# merge_method: linear
+# dtype: bfloat16

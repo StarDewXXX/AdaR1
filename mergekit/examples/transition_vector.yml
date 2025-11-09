@@ -1,0 +1,26 @@
+models:
+  - model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+    parameters:
+      weight: 1.0
+  - model: ../verl/length_control/models/qwen-r1-7B/DeepSeek-R1-Distill-Qwen-7B-detailed_superficial_to_concise_superficial/checkpoint-312
+    parameters:
+      weight: 1.0 #0.75
+  - model: ../verl/length_control/models/qwen-r1-7B/DeepSeek-R1-Distill-Qwen-7B-detailed_superficial/checkpoint-312
+    parameters:
+      weight: -1.0 #-0.75
+  - model: ../verl/length_control/models/qwen-r1-7B/DeepSeek-R1-Distill-Qwen-7B-detailed_superficial_to_detailed_reflective/checkpoint-156
+    parameters:
+      weight: 1.0
+merge_method: linear
+dtype: float32 #bfloat16 # #
+
+
+# models:
+#   - model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+#     parameters:
+#       weight: 0.9
+#   - model: ../verl/length_control/models/DeepSeek-R1-Distill-Qwen-7B-concise_superficial_cot/checkpoint-250
+#     parameters:
+#       weight: 0.1
+# merge_method: linear
+# dtype: bfloat16
