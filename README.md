@@ -46,12 +46,17 @@ To reproduce our method, you need to use MergeKit, LLaMA-Factory and our dataset
 
 ### Step 0: Prepare a Short-CoT Model
 
-When using models from the **Deepseek-Distilled** series, inconsistencies in chat templates may arise. To address this issue, we fine-tune the **Long-CoT model** using 2,000 short-CoT samples with consistent templates, thereby obtaining the **Short-CoT model**. If the two models you are using share the same chat template, this step can be omitted. The specific parameter settings are as follows:
-
+When using models from the **Deepseek-Distilled** series, inconsistencies in chat templates may arise. To address this issue, we fine-tune the **Long-CoT model** using 2,000 short-CoT samples with consistent templates, thereby obtaining the **Short-CoT model**. If the two models you are using share the same chat template, this step can be omitted. The specific parameter settings of LLaMA-Factory can be found at ...
 
 ### Step 1: Merge Long and Short Models
 
+Subsequently, we employ **MergeKit** to merge the **Long-CoT** and **Short-CoT** models. The configuration can be modified to your own path at ...
+And then run: ...
+
 ### Step 2: Construct Training Dataset
+
+Then we use the scripts provided by **Light-R1** to generate initial samples from the Short-CoT and Long-CoT models. You should run the following commands: ...
 
 ### Step 3: Training an Adaptive Reasoning Model
 
+After completing all the above steps, you can execute the final training phase using **LLaMA-Factory** or any other framework that **supports DPO**. We provide the configuration file for LLaMA-Factory in ...
