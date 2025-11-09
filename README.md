@@ -41,7 +41,7 @@ To address this, AdaR1 introduces a **bi-level adaptive strategy** that dynamica
 
 ---
 
-## Reproduce Guide
+## Reproduce Guide [In Progress]
 To reproduce our method, you need to use MergeKit, LLaMA-Factory and our dataset construction scripts.
 
 ### Step 0: Prepare a Short-CoT Model
