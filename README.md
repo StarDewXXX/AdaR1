@@ -44,7 +44,10 @@ To address this, AdaR1 introduces a **bi-level adaptive strategy** that dynamica
 ## Reproduce Guide
 To reproduce our method, you need to use MergeKit, LLaMA-Factory and our dataset construction scripts.
 
-### Step 0: 
+### Step 0: Prepare a Short-CoT Model
+
+When using models from the **Deepseek-Distilled** series, inconsistencies in chat templates may arise. To address this issue, we fine-tune the **Long-CoT model** using 2,000 short-CoT samples with consistent templates, thereby obtaining the **Short-CoT model**. If the two models you are using share the same chat template, this step can be omitted. The specific parameter settings are as follows:
+
 
 ### Step 1: Merge Long and Short Models
 
