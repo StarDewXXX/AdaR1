@@ -1,0 +1,49 @@
+### model
+model_name_or_path: ../verl/length_control/models/Deepseek-Qwen-7B/long_0.8_short_0.2 #deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+### method
+stage: dpo
+# pref_loss: partial_ln
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json
+pref_beta: 0.1
+report_to: wandb
+# use_adam_mini: true
+
+### dataset
+dataset: ds-7b_dpo_bilevel_M1-4-M2-2 #ds-7b_dpo_bilevel #open_r1_cot_length_6k #qwen-14b-medium-cot #
+template: deepseek3
+cutoff_len: 4096 #2048 #8192
+max_samples: 15000 #10000
+overwrite_cache: true
+preprocessing_num_workers: 16
+# packing: true
+
+### output
+output_dir: ../verl/length_control/models/Deepseek-Qwen-7B/Deepseek-Qwen-7B-merge-0.8-dpo-beta-0.1-no-ln-bilevel-fulldata-M1-4-M2-2-cosine-lr
+logging_steps: 2
+save_strategy: "epoch"
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: true
+
+### train
+per_device_train_batch_size: 1 #1 #1 #2 #1
+gradient_accumulation_steps: 4 #8 #8 #4 #8
+learning_rate: 5.0e-7
+num_train_epochs: 3.0 # 2.0
+lr_scheduler_type: cosine #cosine #cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+max_grad_norm: 50
+
+### eval
+val_size: 0.0001
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 50000
+
+### optimization
+flash_attn: fa2
+enable_liger_kernel: true
