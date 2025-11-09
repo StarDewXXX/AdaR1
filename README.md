@@ -41,6 +41,14 @@ To address this, AdaR1 introduces a **bi-level adaptive strategy** that dynamica
 
 ---
 
-## 📦 Code & Model Release
+## Reproduce Guide
+To reproduce our method, you need to use MergeKit, LLaMA-Factory and our dataset construction scripts.
 
-The official implementation and model checkpoints will be **open-sourced soon**.
+### Step 0: 
+
+### Step 1: Merge Long and Short Models
+
+### Step 2: Construct Training Dataset
+
+### Step 3: Training an Adaptive Reasoning Model
+
