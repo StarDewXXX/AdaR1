@@ -50,13 +50,12 @@ When using models from the **Deepseek-Distilled** series, inconsistencies in cha
 
 ### Step 1: Merge Long and Short Models
 
-Subsequently, we employ **MergeKit** to merge the **Long-CoT** and **Short-CoT** models. The configuration can be modified to your own path at ...
-And then run: ...
+Subsequently, we employ **MergeKit** to merge the **Long-CoT** and **Short-CoT** models. The configuration can be found at `/mergekit/examples/naive_merge.yml`
 
 ### Step 2: Construct Training Dataset
 
-Then we use the scripts provided by **Light-R1** to generate initial samples from the Short-CoT and Long-CoT models. You should run the following commands: ...
+Then we use the scripts provided by **Light-R1** to generate initial samples from the Short-CoT and Long-CoT models. You should run the `Dataset-Construction/deepscaler-release/scripts/eval/sample_from_model.sh` and `Dataset-Construction/deepscaler-release/scripts/eval/constrcut_adaptive_dataset.py`
 
 ### Step 3: Training an Adaptive Reasoning Model
 
-After completing all the above steps, you can execute the final training phase using **LLaMA-Factory** or any other framework that **supports DPO**. We provide the configuration file for LLaMA-Factory in ...
+After completing all the above steps, you can execute the final training phase using **LLaMA-Factory** or any other framework that **supports DPO**. We provide the configuration file for LLaMA-Factory in `/LLaMA-Factory-YAMLs/`
